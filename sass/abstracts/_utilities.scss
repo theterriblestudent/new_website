@@ -1,0 +1,29 @@
+@use './variables';
+
+/* Typography **/
+.font-primary {font-family: variables.$fs-primary;}
+.font-secondary {font-family: variables.$fs-secondary;}
+
+.fs-xsm {font-size: variables.$fs-xs;}
+.fs-sm {font-size: variables.$fs-sm;}
+.fs-med {font-size: variables.$fs-med;}
+.fs-lg {font-size: variables.$fs-lg;}
+.fs-xlg {font-size: variables.$fs-xlg;}
+
+.lh-card {line-height: variables.$lh-card;}
+.lh-body {line-height: variables.$lh-body;}
+
+.ls-med {letter-spacing: variables.$ls-med;}
+.ls-lg {letter-spacing: variables.$ls-lg;}
+
+.f-weight-normal {font-weight: variables.$fw-400;}
+.f-weight-light {font-weight: variables.$fw-300;}
+.f-weight-medium {font-weight: variables.$fw-600;}
+.f-weight-bold {font-weight: variables.$fw-700;}
+
+.clr-text-light {color: variables.$on-text-color;}
+.clr-text-dark {color: variables.$on-text-color-dark;}
+
+.text-uppercase {text-transform: uppercase;}
+
+/* Sizes**/

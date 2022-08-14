@@ -1,0 +1,38 @@
+@use '../abstracts/variables';
+
+.button {
+    padding: 10px 15px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: variables.$fs-primary;
+}
+
+.button[data-type="ghost"] {
+    border: 2px solid variables.$primary-color-400;
+    border-radius: 500px;
+    font-weight: variables.$fw-600;
+}
+
+%text-button {
+    font-weight: variables.$fw-600;
+    text-transform: uppercase;
+    font-size: variables.$fs-sm;
+}
+
+.button[data-type="text-primary"] {
+    @extend %text-button;
+    color: variables.$primary-color-400;
+}
+
+.button[data-type="text-secondary"] {
+    @extend %text-button;
+    color: variables.$on-text-color;
+}
+
+.button[data-type="icon"] {
+    @extend %text-button;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
