@@ -1,0 +1,9 @@
+@use '../abstracts/variables';
+
+.project__card {
+    .card__title {margin-bottom: -10px;}
+    flex-basis: 370px;
+    position: relative;
+    border: 2px solid variables.$bg-color-300;
+    padding: 30px;
+}

@@ -1,0 +1,16 @@
+@use '../abstracts/variables';
+
+.about {
+    padding-bottom: 80px;
+    .name {
+        margin-bottom: 90px;
+    }
+    .expertise {
+        .expertise__info {
+            border-radius: 10px;
+            #expertise-title {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

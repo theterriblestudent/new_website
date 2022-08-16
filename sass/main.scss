@@ -1,4 +1,19 @@
 @use './base/resets';
 @use './abstracts/abstracts';
+@use './abstracts/variables';
 @use './components/components';
 @use './layout/layout';
+
+.title-header {
+    position: relative;
+    p {
+        &:before {
+            content: '';
+            display: inline-block;
+            height: 2px;
+            width: 20px;
+            margin-right: 5px;
+            background-color: variables.$primary-color-400;
+        }
+    }
+}

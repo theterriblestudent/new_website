@@ -14,7 +14,11 @@
 .jc-center {justify-content: center;}
 .jc-left {justify-content: flex-start;}
 .jc-end {justify-self: flex-end;}
+.jc-space-between {justify-content: space-between;}
 .ai-center {align-items: center;}
+.ac-left {align-items: flex-start;}
+.as-start {align-self: flex-start;}
+.js-start {justify-self: flex-start;}
 
 .gap-10 { gap: 10px;}
 .gap-20 {gap: 20px;}
@@ -32,6 +36,14 @@
 }.ptb-40 {
     padding-top: 40px;
     padding-bottom: 40px;
+}
+
+.p-20 {padding: 20px;}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
 }
 
 

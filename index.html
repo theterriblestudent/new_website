@@ -52,16 +52,120 @@
         </span>
     </section>
     <!--About Section -->
-    <section class="[ about ] [ bg-dark-400 ]">
+    <section class="[ about ] [ bg-dark-400 ptb-40 ]">
         <div class="[ name ] [ flex-row gap-80 ai-center jc-center ] [ font-secondary fs-lg ls-lg text-uppercase clr-text-light f-weight-light ]">
             <p>Sanele</p>
             <p>Madondo</p>
         </div>
-        <div class="[ about__content ] [  ]">
-            <div class="[ introduction ] [ ]"></div>
-            <div class="[ expertise ] [ ]">
-                <div class="[ expertise__icons ] [ ]">
+        <!--Introduction-->
+        <div class="[ about__content ] [ container flex-row jc-space-between gap-80 ]">
+            <div class="[ introduction ] [ flex-column ac-left gap-20 ]">
+                <div class="[ title-header ]">
+                    <p class="[ flex ai-center ][ font-primary ls-med clr-text-primary f-weight-medium fs-xsm ]">Introduction</p>
                 </div>
+                <h1 class="[ fs-lg f-weight-bold font-primary clr-text-light ]">About Me</h1>
+                <p class="[ fs-sm lh-body clr-text-dark f-weight-normal font-primary ]">I am a passionate young developer who enjoys designing and coding websites. I started my web development journey about 2 years ago. Currently, I am only proficient in front-end technologies, but I am learning to do the back-end as well. I am quite confident that the years of learning I went through are going to help me build you the website of your dreams.</p>
+                <button data-type="icon" class="[ button ]">
+                    Contact Me
+                    <span class="material-icons">
+                        arrow_right_alt
+                    </span>
+                </button>
+            </div>
+            <!--Skills/Areas of Expertise-->
+            <div class="[ expertise ] [ flex-column ac-left gap-40 ]">
+                <h1 class="[ fs-lg f-weight-bold font-primary clr-text-light ]">My Areas of Expertise</h1>
+                <div class="[ expertise__icons ] [ flex-row gap-40 jc-center ai-center ]">
+                    <object class="[ svg-icon ]" id="web-design-icon" type="image/svg+xml" data="resources/svg/web-design-icon.svg" ></object>
+                    <object class="[ svg-icon ]" id="seo-icon" type="image/svg+xml" data="resources/svg/seo-icon.svg" ></object>
+                    <object class="[ svg-icon ]" id="web-coding-icon" type="image/svg+xml" data="resources/svg/web-coding.svg" ></object>
+                    <object class="[ svg-icon ]" id="bug-fix-icon" type="image/svg+xml" data="resources/svg/bug-fixes.svg" ></object>
+                </div>
+                <div class="[ expertise__info ] [ p-20 non-mobile ] [ bg-dark-300 ]">
+                    <p id="expertise-title" class="[ f-weight-medium clr-text-primary fs-med font-primary ]">Responsive Web Design</p>
+                    <p id="expertise-description" class="[ clr-text-light fs-sm lh-card font-primary ]">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis.</p>
+                </div>
+            </div> 
+        </div>
+    </section>
+    <!--Portfolio Projects-->
+    <section class="[ portfolio ] [ bg-dark-400 ]">
+        <div class="[ portfolio__content ] [ container ]">
+            <div class="[ title-header ]">
+                <p class="[ flex ai-center ][ font-primary ls-med clr-text-primary f-weight-medium fs-xsm ]">Work</p>
+            </div>
+            <h1 class="[ fs-lg f-weight-bold font-primary clr-text-light ]">My Portfolio Projects</h1>
+            <div class="[ portfolio__projects ] [ flex-row gap-40 ]">
+                <div class="[ project__card ] [ flex-column gap-20 ]">
+                    <img src="./resources/images/old-portfolio.png" alt="project" />
+                    <p class="[ card__title ][ font-primary f-weight-medium clr-text-primary fs-med ]">My Old Porfolio</p>
+                    <p class="[ font-primary f-weight-normal clr-text-dark lh-card fs-sm ]">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis.</p>
+                    <div class="[ flex-row jc-left ai-center gap-20 ]">
+                        <a data-type="text-primary" class="[ button ]" href=#>Live Demo</a>
+                        <a data-type="text-secondary" class="[ button ]" href="#">View Code</a>
+                    </div>
+                </div>
+                <div class="[ project__card ] [ flex-column gap-20 ]">
+                    <img src="./resources/images/old-portfolio.png" alt="project" />
+                    <p class="[ card__title ][ font-primary f-weight-medium clr-text-primary fs-med ]">My Old Porfolio</p>
+                    <p class="[ font-primary f-weight-normal clr-text-dark lh-card fs-sm ]">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis.</p>
+                    <div class="[ flex-row jc-left ai-center gap-20 ]">
+                        <a data-type="text-primary" class="[ button ]" href=#>Live Demo</a>
+                        <a data-type="text-secondary" class="[ button ]" href="#">View Code</a>
+                    </div>
+                </div>
+                <div class="[ project__card ] [ flex-column gap-20 ]">
+                    <img src="./resources/images/old-portfolio.png" alt="project" />
+                    <p class="[ card__title ][ font-primary f-weight-medium clr-text-primary fs-med ]">My Old Porfolio</p>
+                    <p class="[ font-primary f-weight-normal clr-text-dark lh-card fs-sm ]">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis.</p>
+                    <div class="[ flex-row jc-left ai-center gap-20 ]">
+                        <a data-type="text-primary" class="[ button ]" href=#>Live Demo</a>
+                        <a data-type="text-secondary" class="[ button ]" href="#">View Code</a>
+                    </div>
+                </div>   
+            </div>
+        </div>
+    </section>
+    <!--Contact Me Section-->
+    <section class="[ contact ] [ bg-dark-400 ]">
+        <div class="[ contact__content ] [ container ]">
+            <div class="[ title-header ]">
+                <p class="[ flex ai-center ][ font-primary ls-med clr-text-primary f-weight-medium fs-xsm ]">Get In Touch</p>
+            </div>
+            <h1 class="[ fs-lg f-weight-bold font-primary clr-text-light ]">Contact Me</h1>
+            <div class="[ contact__details] [ flex-row gap-40 jc-space-between ai-center ]">
+                <form class="[ email ] [ flex-column ac-left gap-20 ]">
+                    <div class="[ text-field ]">
+                        <label class="[ fs-xsm font-primary clr-text-light f-weight-medium ]" for="name-field">Name</label>
+                        <div class="[ input-border ]">
+                            <input class="[ clr-text-light font-primary ]" type="text" id="name-field" placeholder="John Doe"/>
+                        </div>
+                    </div>
+                    <div class="[ text-field ]">
+                        <label class="[ fs-xsm font-primary clr-text-light f-weight-medium ]" for="email-field">Email</label>
+                        <div class="[ input-border ]">
+                            <input class="[ clr-text-light font-primary ]" type="email" id="email-field" placeholder="me@example.com"/>
+                        </div>
+                    </div>
+                    <div class="[ message-field ]">
+                        <label class="[ fs-xsm font-primary clr-text-light f-weight-medium ]" for="message-field">Message</label>
+                        <div class="[ input-border ]">
+                            <textarea class="[ clr-text-light font-primary ]" type="" id="name-field" placeholder="Hello! How can I be of service?"></textarea>
+                        </div>
+                    </div>
+                    <div class="[ flex-row jc-left gap-20 ai-center ]">
+                        <button data-type="icon" class="[ button ]">Send
+                            <span class="material-icons">
+                                send
+                            </span>
+                        </button>
+                        <button data-type="text-secondary" class="[ button ]">Clear Fields</button>
+                    </div>
+                </form>
+                <div class="[ socials ]">
+
+                </div>
+                <p class="[ email-address ] [ f-weight-medium fs-lg font-primary clr-text-dark ]">me@terribledevs.com</p>
             </div>
         </div>
     </section>

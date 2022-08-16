@@ -17,6 +17,9 @@
     font-weight: variables.$fw-600;
     text-transform: uppercase;
     font-size: variables.$fs-sm;
+    background: transparent;
+    border:none;
+    padding: 0;
 }
 
 .button[data-type="text-primary"] {
@@ -35,4 +38,10 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
+    color: variables.$primary-color-400;
+
+    .material-icons {
+        color: variables.$primary-color-400;
+        font-size: 24px;
+    }
 }

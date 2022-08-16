@@ -1,0 +1,35 @@
+@use '../abstracts/variables';
+
+form {
+    width: 100%;
+}
+
+.text-field {
+    width: 100%;
+    .input-border {
+        border: 2px solid variables.$bg-color-300;
+        padding: 15px;
+        margin-top: 15px;
+        width: 100%;
+        input {
+            background-color: variables.$bg-color-300;
+            border: none;
+            outline: none;
+            height: 40px;
+            width: 100%;
+            padding: 10px;
+        }
+    }
+}
+
+.message-field {
+    @extend .text-field;
+    textarea {
+        background-color: variables.$bg-color-300;
+        border: none;
+        outline: none;
+        width: 100%;
+        padding: 10px;
+        height: 250px;
+    }
+}
