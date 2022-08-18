@@ -1,8 +1,21 @@
+@use '../abstracts/mixins';
+
 .portfolio {
     padding-bottom: 110px;
     h1 {
         margin-bottom: 40px;
-        margin-top: 10px;
+        @include mixins.computer {
+            margin-top: 10px;
+        }
+        @include mixins.tablet {
+            text-align: center;
+        }
+
     }
-    &__projects {flex-wrap: wrap;}
+    &__projects {
+        flex-wrap: wrap;
+        @include mixins.tablet {
+            justify-content: center;
+        }
+    }
 }

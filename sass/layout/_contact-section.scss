@@ -1,5 +1,26 @@
+@use '../abstracts/mixins';
+
 .contact {
+    padding-bottom: 50px;
     &__content {
-        h1 {margin-bottom: 30px;}
+        @include mixins.mobile {
+            align-items: center;
+        }
+        h1 {
+            margin-bottom: 30px;
+            @include mixins.tablet {
+                text-align: center;
+            }
+        }
+        .contact__details {
+            @include mixins.mobile {
+                justify-content: center;
+            }
+            .buttons {
+                @include mixins.mobile {
+                    align-self: center;
+                }
+            }
+        }
     }
 }

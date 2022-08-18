@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/main.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&family=Oswald:wght@300&display=swap" rel="stylesheet">
     <link href="http://fonts.cdnfonts.com/css/yanone-kaffeesatz" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -14,7 +15,7 @@
 </head>
 <body class="[ relative ]">
     <!-- Navigation -->
-    <nav class="[ nav ] [ fixed-tl-start ] [ font-primary fs-xsm text-uppercase f-weight-medium clr-text-light ]"> 
+    <nav class="[ nav ] [ font-primary fs-xsm text-uppercase f-weight-medium clr-text-light ]"> 
         <!--Non-mobile navigation for large screens-->
         <div class="[ nav__non-mobile ][ non-mobile ptb-40 ]">
             <ul role="list" class="[ flex-row gap-40 jc-center ai-center ]">
@@ -25,9 +26,14 @@
                 <li data-type="ghost" class="[ button ]">Contact me</li>
             </ul>
         </div>
+        <div class="[ menu-button-container ] [ p-20 flex-row jc-right ai-center mobile container ]">
+            <span id="menu-button" class="material-icons menu-icon">
+                menu
+            </span> 
+        </div>
         <!--Mobile navigation for smaller screens-->
-        <div class="[ nav__mobile ] [  ] [ mobile ]">
-            <ul role="list">
+        <div class="[ nav__mobile ] [ ptb-10 mobile]">
+            <ul role="list" class="[ mobile flex-column gap-20 jc-center ]">
                 <li>About</li>
                 <li>Projects</li>
                 <li>My Github</li>
@@ -37,11 +43,11 @@
         </div>
     </nav>
     <!--Showcase Section-->
-    <section class="[ showcase ] [ relative ]">
+    <section class="[ showcase ]  [ relative ]">
         <div class="[ bg-image ] [ abosulte-tl-start ]"></div>
         <div class="[ overlay ] [ abosulte-tl-start ]"></div>
         <div class="[ showcase-text ] [ flex-column gap-10 jc-center ai-center ]">
-            <div class="[ name ] [ flex-row gap-120 ai-center jc-center ] [ font-secondary fs-xlg ls-lg text-uppercase clr-text-light f-weight-light ]">
+            <div class="[ name ] [ flex-row ai-center jc-center ] [ font-secondary fs-xlg ls-lg text-uppercase clr-text-light f-weight-light ]">
                 <p>Sanele</p>
                 <p>Madondo</p>
             </div>
@@ -60,7 +66,7 @@
         <!--Introduction-->
         <div class="[ about__content ] [ container flex-row jc-space-between gap-80 ]">
             <div class="[ introduction ] [ flex-column ac-left gap-20 ]">
-                <div class="[ title-header ]">
+                <div class="[ title-header ] [ non-mobile ]">
                     <p class="[ flex ai-center ][ font-primary ls-med clr-text-primary f-weight-medium fs-xsm ]">Introduction</p>
                 </div>
                 <h1 class="[ fs-lg f-weight-bold font-primary clr-text-light ]">About Me</h1>
@@ -75,11 +81,41 @@
             <!--Skills/Areas of Expertise-->
             <div class="[ expertise ] [ flex-column ac-left gap-40 ]">
                 <h1 class="[ fs-lg f-weight-bold font-primary clr-text-light ]">My Areas of Expertise</h1>
-                <div class="[ expertise__icons ] [ flex-row gap-40 jc-center ai-center ]">
+                <div class="[ expertise__icons ] [ flex-row gap-40 jc-center ai-center non-mobile ]">
                     <object class="[ svg-icon ]" id="web-design-icon" type="image/svg+xml" data="resources/svg/web-design-icon.svg" ></object>
                     <object class="[ svg-icon ]" id="seo-icon" type="image/svg+xml" data="resources/svg/seo-icon.svg" ></object>
                     <object class="[ svg-icon ]" id="web-coding-icon" type="image/svg+xml" data="resources/svg/web-coding.svg" ></object>
                     <object class="[ svg-icon ]" id="bug-fix-icon" type="image/svg+xml" data="resources/svg/bug-fixes.svg" ></object>
+                </div>
+                <div class="[ expertise__icons-mobile ] [ flex-column jc-center ai-center gap-20 mobile ]">
+                    <div class="[ skill ] [ p-20 bg-dark-300 flex-row gap-20 jc-center ai-center ]">
+                        <object class="[ svg-icon ]" id="web-design-icon" type="image/svg+xml" data="resources/svg/web-design-icon.svg" ></object>
+                        <div class="[ skill-description ]">
+                            <p class="[ f-weight-medium clr-text-primary fs-med font-primary ]">Responsive Web Design</p>
+                            <p class="[ clr-text-light fs-sm lh-card font-primary ]">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis.</p>
+                        </div>
+                    </div>
+                    <div class="[ skill ] [ p-20 bg-dark-300 flex-row gap-20 jc-center ai-center ]">
+                        <object class="[ svg-icon ]" id="web-design-icon" type="image/svg+xml" data="resources/svg/seo-icon.svg" ></object>
+                        <div class="[ skill-description ]">
+                            <p class="[ f-weight-medium clr-text-primary fs-med font-primary ]">SEO</p>
+                            <p class="[ clr-text-light fs-sm lh-card font-primary ]">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis.</p>
+                        </div>
+                    </div>
+                    <div class="[ skill ] [ p-20 bg-dark-300 flex-row gap-20 jc-center ai-center ]">
+                        <object class="[ svg-icon ]" id="web-design-icon" type="image/svg+xml" data="resources/svg/web-coding.svg" ></object>
+                        <div class="[ skill-description ]">
+                            <p class="[ f-weight-medium clr-text-primary fs-med font-primary ]">Web Coding</p>
+                            <p class="[ clr-text-light fs-sm lh-card font-primary ]">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis.</p>
+                        </div>
+                    </div>
+                    <div class="[ skill ] [ p-20 bg-dark-300 flex-row gap-20 jc-center ai-center ]">
+                        <object class="[ svg-icon ]" id="web-design-icon" type="image/svg+xml" data="resources/svg/bug-fixes.svg" ></object>
+                        <div class="[ skill-description ]">
+                            <p class="[ f-weight-medium clr-text-primary fs-med font-primary ]">Bug Fixes</p>
+                            <p class="[ clr-text-light fs-sm lh-card font-primary ]">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis.</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="[ expertise__info ] [ p-20 non-mobile ] [ bg-dark-300 ]">
                     <p id="expertise-title" class="[ f-weight-medium clr-text-primary fs-med font-primary ]">Responsive Web Design</p>
@@ -91,7 +127,7 @@
     <!--Portfolio Projects-->
     <section class="[ portfolio ] [ bg-dark-400 ]">
         <div class="[ portfolio__content ] [ container ]">
-            <div class="[ title-header ]">
+            <div class="[ title-header ] [ non-mobile ]">
                 <p class="[ flex ai-center ][ font-primary ls-med clr-text-primary f-weight-medium fs-xsm ]">Work</p>
             </div>
             <h1 class="[ fs-lg f-weight-bold font-primary clr-text-light ]">My Portfolio Projects</h1>
@@ -106,8 +142,8 @@
                     </div>
                 </div>
                 <div class="[ project__card ] [ flex-column gap-20 ]">
-                    <img src="./resources/images/old-portfolio.png" alt="project" />
-                    <p class="[ card__title ][ font-primary f-weight-medium clr-text-primary fs-med ]">My Old Porfolio</p>
+                    <img src="./resources/images/new-portfolio.png" alt="project" />
+                    <p class="[ card__title ][ font-primary f-weight-medium clr-text-primary fs-med ]">My New Portfolio</p>
                     <p class="[ font-primary f-weight-normal clr-text-dark lh-card fs-sm ]">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis.</p>
                     <div class="[ flex-row jc-left ai-center gap-20 ]">
                         <a data-type="text-primary" class="[ button ]" href=#>Live Demo</a>
@@ -115,8 +151,17 @@
                     </div>
                 </div>
                 <div class="[ project__card ] [ flex-column gap-20 ]">
-                    <img src="./resources/images/old-portfolio.png" alt="project" />
-                    <p class="[ card__title ][ font-primary f-weight-medium clr-text-primary fs-med ]">My Old Porfolio</p>
+                    <img src="./resources/images/sass-website.png" alt="project" />
+                    <p class="[ card__title ][ font-primary f-weight-medium clr-text-primary fs-med ]">Saas Website</p>
+                    <p class="[ font-primary f-weight-normal clr-text-dark lh-card fs-sm ]">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis.</p>
+                    <div class="[ flex-row jc-left ai-center gap-20 ]">
+                        <a data-type="text-primary" class="[ button ]" href=#>Live Demo</a>
+                        <a data-type="text-secondary" class="[ button ]" href="#">View Code</a>
+                    </div>
+                </div> 
+                <div class="[ project__card ] [ flex-column gap-20 ]">
+                    <img src="./resources/images/mbd.png" alt="project" />
+                    <p class="[ card__title ][ font-primary f-weight-medium clr-text-primary fs-med ]">Movie DB App</p>
                     <p class="[ font-primary f-weight-normal clr-text-dark lh-card fs-sm ]">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis.</p>
                     <div class="[ flex-row jc-left ai-center gap-20 ]">
                         <a data-type="text-primary" class="[ button ]" href=#>Live Demo</a>
@@ -128,12 +173,12 @@
     </section>
     <!--Contact Me Section-->
     <section class="[ contact ] [ bg-dark-400 ]">
-        <div class="[ contact__content ] [ container ]">
-            <div class="[ title-header ]">
+        <div class="[ contact__content ] [ container flex-column ]">
+            <div class="[ title-header ] [ non-mobile ]">
                 <p class="[ flex ai-center ][ font-primary ls-med clr-text-primary f-weight-medium fs-xsm ]">Get In Touch</p>
             </div>
             <h1 class="[ fs-lg f-weight-bold font-primary clr-text-light ]">Contact Me</h1>
-            <div class="[ contact__details] [ flex-row gap-40 jc-space-between ai-center ]">
+            <div class="[ contact__details ] [ flex-row gap-40 flex-wrap jc-space-between ai-center ]">
                 <form class="[ email ] [ flex-column ac-left gap-20 ]">
                     <div class="[ text-field ]">
                         <label class="[ fs-xsm font-primary clr-text-light f-weight-medium ]" for="name-field">Name</label>
@@ -153,7 +198,7 @@
                             <textarea class="[ clr-text-light font-primary ]" type="" id="name-field" placeholder="Hello! How can I be of service?"></textarea>
                         </div>
                     </div>
-                    <div class="[ flex-row jc-left gap-20 ai-center ]">
+                    <div class="[ buttons ][ flex-row jc-left gap-20 ai-center ]">
                         <button data-type="icon" class="[ button ]">Send
                             <span class="material-icons">
                                 send
@@ -162,12 +207,16 @@
                         <button data-type="text-secondary" class="[ button ]">Clear Fields</button>
                     </div>
                 </form>
-                <div class="[ socials ]">
-
+                <div class="[ socials ] [ flex-row gap-40 jc-center ai-center ] [ clr-text-light fs-lg ]">
+                    <i class="fab fa-github" ></i>
+                    <i class="fab fa-facebook" ></i>
+                    <i class="fab fa-twitter" ></i>
+                    <i class="fab fa-instagram" ></i>
                 </div>
                 <p class="[ email-address ] [ f-weight-medium fs-lg font-primary clr-text-dark ]">me@terribledevs.com</p>
             </div>
         </div>
     </section>
+    <script src="./index.js"></script>
 </body>
 </html>

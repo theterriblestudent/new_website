@@ -6,9 +6,17 @@
 
 .fs-xsm {font-size: variables.$fs-xs;}
 .fs-sm {font-size: variables.$fs-sm;}
-.fs-med {font-size: variables.$fs-med;}
-.fs-lg {font-size: variables.$fs-lg;}
-.fs-xlg {font-size: variables.$fs-xlg;}
+.fs-med {
+    font-size: 1.125rem;
+    font-size: clamp(1.125rem, 1.0357142857142858rem + 0.2857142857142857vw, 1.25rem);
+}
+.fs-lg {
+    font-size: 1.4375rem;
+    font-size: clamp(1.4375rem, 0.9017857142857143rem + 1.7142857142857144vw, 2.1875rem);
+}
+.fs-xlg {
+    font-size: clamp(2.7rem, 6.25vw, 7.5rem);
+}
 
 .lh-card {line-height: variables.$lh-card;}
 .lh-body {line-height: variables.$lh-body;}

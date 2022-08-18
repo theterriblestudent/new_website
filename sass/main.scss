@@ -4,6 +4,12 @@
 @use './components/components';
 @use './layout/layout';
 
+.name {
+    gap: 1em;
+}
+
+body {background-color: variables.$bg-color-400;}
+
 .title-header {
     position: relative;
     p {

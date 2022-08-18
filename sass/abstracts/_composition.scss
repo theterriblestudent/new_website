@@ -10,9 +10,11 @@
     display: flex;
     flex-direction: column;
 }
+.flex-wrap {flex-wrap: wrap;}
 
 .jc-center {justify-content: center;}
 .jc-left {justify-content: flex-start;}
+.jc-right {justify-content: flex-end;}
 .jc-end {justify-self: flex-end;}
 .jc-space-between {justify-content: space-between;}
 .ai-center {align-items: center;}

@@ -1,8 +1,12 @@
 @use '../abstracts/variables';
+@use '../abstracts/mixins';
 
 .showcase {
     width: 100%;
     height: 100vh;
+    @include mixins.mobile {
+        height: 80vh;
+    }
     .bg-image {
         width: 100%;
         height: 100%;
@@ -19,6 +23,14 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -70%);
+
+        .name {
+            @include mixins.mobile {
+                gap: 0;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
 
         .profession {font-family: 'Yanone Kaffeesatz', sans-serif;}
     }
