@@ -32,7 +32,12 @@
             }
         }
 
-        .profession {font-family: 'Yanone Kaffeesatz', sans-serif;}
+        .profession {
+            font-family: 'Yanone Kaffeesatz', sans-serif;
+            @include mixins.mobile {
+                text-align: center;
+            }
+        }
     }
     .material-icons.scroll-icon {
         position: absolute;

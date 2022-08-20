@@ -2,8 +2,8 @@
 $primary-color-400: #7C6528;
 $on-text-color: #E4E2E2;
 $on-text-color-dark: #AFAFAF;
-$bg-color-400: #0D0F0E;
-$bg-color-300: #1A1D1C;
+$bg-color-400: lighten(#0D0F0E, 2);
+$bg-color-300: lighten(#1A1D1C, 3);
 
 /* Font Weights **/
 $fw-300: 300;
