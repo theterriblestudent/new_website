@@ -19,11 +19,11 @@
         <!--Non-mobile navigation for large screens-->
         <div class="[ nav__non-mobile ][ non-mobile ptb-40 ]">
             <ul role="list" class="[ flex-row gap-40 jc-center ai-center ]">
-                <li>About</li>
-                <li>Projects</li>
-                <li>My Github</li>
-                <li>Blog</li>
-                <li data-type="ghost" class="[ button ]">Contact me</li>
+                <li><a href="#about-section">About</a></li>
+                <li><a href="#projects-section">Projects</a></li>
+                <li><a href="#">My Github</a></li>
+                <li><a href="#">Blog</a></li>
+                <li data-type="ghost" class="[ button ]"><a href="#contact-section">Contact me</a></li>
             </ul>
         </div>
         <div class="[ menu-button-container ] [ p-20 flex-row jc-right ai-center mobile container ]">
@@ -58,7 +58,7 @@
         </span>
     </section>
     <!--About Section -->
-    <section class="[ about ] [ bg-dark-400 ptb-40 ]">
+    <section id="about-section" class="[ about ] [ bg-dark-400 ptb-40 ]">
         <div class="[ name ] [ flex-row gap-80 ai-center jc-center ] [ font-secondary fs-lg ls-lg text-uppercase clr-text-light f-weight-light ]">
             <p>Sanele</p>
             <p>Madondo</p>
@@ -71,21 +71,21 @@
                 </div>
                 <h1 class="[ fs-lg f-weight-bold font-primary clr-text-light ]">About Me</h1>
                 <p class="[ fs-sm lh-body clr-text-dark f-weight-normal font-primary ]">I am a passionate young developer who enjoys designing and coding websites. I started my web development journey about 2 years ago. Currently, I am only proficient in front-end technologies, but I am learning to do the back-end as well. I am quite confident that the years of learning I went through are going to help me build you the website of your dreams.</p>
-                <button data-type="icon" class="[ button ]">
+                <a href="#contact-section" data-type="icon" class="[ button ]">
                     Contact Me
                     <span class="material-icons">
                         arrow_right_alt
                     </span>
-                </button>
+                </a>
             </div>
             <!--Skills/Areas of Expertise-->
             <div class="[ expertise ] [ flex-column ac-left gap-40 ]">
                 <h1 class="[ fs-lg f-weight-bold font-primary clr-text-light ]">My Areas of Expertise</h1>
                 <div class="[ expertise__icons ] [ flex-row gap-40 jc-center ai-center non-mobile ]">
-                    <object class="[ svg-icon ]" id="web-design-icon" type="image/svg+xml" data="resources/svg/web-design-icon.svg" ></object>
-                    <object class="[ svg-icon ]" id="seo-icon" type="image/svg+xml" data="resources/svg/seo-icon.svg" ></object>
-                    <object class="[ svg-icon ]" id="web-coding-icon" type="image/svg+xml" data="resources/svg/web-coding.svg" ></object>
-                    <object class="[ svg-icon ]" id="bug-fix-icon" type="image/svg+xml" data="resources/svg/bug-fixes.svg" ></object>
+                    <object class="[ svg-icon ] [ svg-icon__non-mobile ] [ pointer ]" id="web-design-icon" type="image/svg+xml" data="resources/svg/web-design-icon.svg" ></object>
+                    <object class="[ svg-icon ] [ svg-icon__non-mobile ] [ pointer ]" id="seo-icon" type="image/svg+xml" data="resources/svg/seo-icon.svg" ></object>
+                    <object class="[ svg-icon ] [ svg-icon__non-mobile ] [ pointer ]" id="web-coding-icon" type="image/svg+xml" data="resources/svg/web-coding.svg" ></object>
+                    <object class="[ svg-icon ] [ svg-icon__non-mobile ] [ pointer ]" id="bug-fix-icon" type="image/svg+xml" data="resources/svg/bug-fixes.svg" ></object>
                 </div>
                 <div class="[ expertise__icons-mobile ] [ flex-column jc-center ai-center gap-20 mobile ]">
                     <div class="[ skill ] [ p-20 bg-dark-300 flex-row gap-20 jc-center ai-center ]">
@@ -125,7 +125,7 @@
         </div>
     </section>
     <!--Portfolio Projects-->
-    <section class="[ portfolio ] [ bg-dark-400 ]">
+    <section id="projects-section" class="[ portfolio ] [ bg-dark-400 ]">
         <div class="[ portfolio__content ] [ container ]">
             <div class="[ title-header ] [ non-mobile ]">
                 <p class="[ flex ai-center ][ font-primary ls-med clr-text-primary f-weight-medium fs-xsm ]">Work</p>
@@ -172,7 +172,7 @@
         </div>
     </section>
     <!--Contact Me Section-->
-    <section class="[ contact ] [ bg-dark-400 ]">
+    <section id="contact-section" class="[ contact ] [ bg-dark-400 ]">
         <div class="[ contact__content ] [ container flex-column ]">
             <div class="[ title-header ] [ non-mobile ]">
                 <p class="[ flex ai-center ][ font-primary ls-med clr-text-primary f-weight-medium fs-xsm ]">Get In Touch</p>

@@ -2,9 +2,10 @@
 @use '../abstracts/mixins';
 
 .about {
-    padding-bottom: 80px;
+    padding-bottom: 140px;
     .name {
         margin-bottom: 90px;
+        gap: 1em;
         @include mixins.tablet {
             margin-bottom: 60px;
         }
@@ -31,13 +32,22 @@
         }
     }
     .expertise {
+        position: relative;
         @include mixins.tablet {
             align-items: center;
         }
         .expertise__info {
             border-radius: 10px;
+            position: absolute;
+            top: 70%;
+            left: 0;
+            right: 0;
+            transition: height 0.5s ease-in-out;
             #expertise-title {
                 margin-bottom: 10px;
+            }
+            p {
+                transition: opacity 0.5s ease-in-out;
             }
         }
         .expertise__icons-mobile {
