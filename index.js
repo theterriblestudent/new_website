@@ -11,16 +11,16 @@ let shownIndex = 0;
 
 const SERVICES = [{
     title: "Resposinve Web Design",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis desgin.",
+    description: "We create responsive web designs that are ensured to look and feel great for every user on every device.",
 }, {
     title: "Search Engine Optimization",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis seo.",
+    description: "All of the websites we build are fully search engine optimized to help you reach a larger audience.",
 }, {
     title: "Web Coding and Programming",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis code.",
+    description: "We use the most effective front-end technologies, like ReactJS, Svelte, and HTML, CSS, and JavaScript, to code websites.",
 }, {
     title: "Bug Fixes",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis bug.",
+    description: "Got an issue with your website? Well, you can trust we'll take care of it for you. Everything from bug fixes to complete re-designs.",
 }]
 
 let timer;
