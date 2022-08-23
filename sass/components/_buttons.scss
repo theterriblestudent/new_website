@@ -5,12 +5,16 @@
     text-transform: uppercase;
     text-decoration: none;
     font-family: variables.$fs-primary;
+    transition: color 0.25s ease-in-out;
+    cursor: pointer;
 }
 
 .button[data-type="ghost"] {
     border: 2px solid variables.$primary-color-400;
     border-radius: 500px;
     font-weight: variables.$fw-600;
+    transition: transform 0.25s ease-in-out;
+    &:hover {transform: scale(0.95);}
 }
 
 %text-button {
@@ -25,11 +29,13 @@
 .button[data-type="text-primary"] {
     @extend %text-button;
     color: variables.$primary-color-400;
+    &:hover {color: lighten($color: variables.$primary-color-400, $amount: 15);}
 }
 
 .button[data-type="text-secondary"] {
     @extend %text-button;
     color: variables.$on-text-color;
+    &:hover {color: variables.$primary-color-400;}
 }
 
 .button[data-type="icon"] {
@@ -39,9 +45,15 @@
     align-items: center;
     gap: 10px;
     color: variables.$primary-color-400;
+    &:hover {
+        .material-icons {
+            margin-left: 10px;
+        }
+    }
 
     .material-icons {
         color: variables.$primary-color-400;
         font-size: 24px;
+        transition: margin-left 0.25s ease-in-out;
     }
 }

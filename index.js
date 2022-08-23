@@ -4,6 +4,8 @@ const mobileNav = document.querySelector('.nav__mobile');
 const serviceTitle = document.querySelector('#expertise-title');
 const serviceDescription = document.querySelector('#expertise-description');
 const services = Array.from(document.querySelector('.expertise__icons').children);
+const SERVICE_ID = 'service_m3hiz3g';
+const TEMPLATE_ID = 'template_ttct74n';
 
 
 //Variables
@@ -77,3 +79,35 @@ function fadeIn() {
     serviceTitle.style.opacity = 1;
     serviceDescription.style.opacity = 1;
 }
+
+/* Form Functionality */
+// Initializing emailjs
+(function () {
+    emailjs.init('user_IJmYFDu8hHE2iHf924Qnr');
+})();
+
+// Submitting the form
+document.querySelector('form').addEventListener('submit', (event) => {
+    event.preventDefault();
+    const templateParams = {
+         from_name: 'a Potential Client',
+         to_name: 'Sanele Madondo',
+         from_name: document.querySelector('#name-field').value,
+         message: document.querySelector('#message-field').value,
+         reply_to: document.querySelector('#email-field').value,
+    }
+
+    emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams).then(response => {
+         console.log('email-sent');
+    }, error => {
+         console.log('email-not-sent');
+    });
+
+    document.querySelector('#message-field').value = '';
+    document.querySelector('#email-field').value = '';
+    document.querySelector('#name-field').value = '';
+});
+
+document.querySelector('.email-address').addEventListener('click', function(event) {
+    window.location.href = `mailto:me@terribledevs.com`;
+});

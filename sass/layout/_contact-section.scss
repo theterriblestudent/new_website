@@ -19,11 +19,17 @@
             }
             .fab {
                 color: variables.$on-text-color;
+                transition: color 0.25s ease-out;
+                &:hover {color: variables.$primary-color-400;}
             }
             .buttons {
                 @include mixins.mobile {
                     align-self: center;
                 }
+            }
+            .email-address {
+                transition: color 0.25s ease-in-out;
+                &:hover {color: variables.$primary-color-400;}
             }
         }
     }

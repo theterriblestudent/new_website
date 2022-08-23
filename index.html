@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&family=Oswald:wght@300&display=swap" rel="stylesheet">
     <link href="http://fonts.cdnfonts.com/css/yanone-kaffeesatz" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <title>Sanele Madondo | Portfolio</title>
 </head>
 <body class="[ relative ]">
@@ -20,10 +20,10 @@
         <!--Non-mobile navigation for large screens-->
         <div class="[ nav__non-mobile ][ non-mobile ptb-40 ]">
             <ul role="list" class="[ flex-row gap-40 jc-center ai-center ]">
-                <li><a href="#about-section">About</a></li>
-                <li><a href="#projects-section">Projects</a></li>
-                <li><a target="_blank" href="https://www.github.com/theterriblestudent">My Github</a></li>
-                <li><a href="#">Blog</a></li>
+                <li><a data-type="text-secondary" class="[ button ]" href="#about-section">About</a></li>
+                <li><a data-type="text-secondary" class="[ button ]" href="#projects-section">Projects</a></li>
+                <li><a data-type="text-secondary" class="[ button ]" target="_blank" href="https://www.github.com/theterriblestudent">My Github</a></li>
+                <li><a data-type="text-secondary" class="[ button ]" href="#">Blog</a></li>
                 <li data-type="ghost" class="[ button ]"><a href="#contact-section">Contact me</a></li>
             </ul>
         </div>
@@ -138,8 +138,8 @@
                     <p class="[ card__title ][ font-primary f-weight-medium clr-text-primary fs-med ]">My Old Porfolio</p>
                     <p class="[ font-primary f-weight-normal clr-text-dark lh-card fs-sm ]">My previous website was built with basic web technologies such as HTML, CSS, and JavaScript.</p>
                     <div class="[ flex-row jc-left ai-center gap-20 ]">
-                        <a data-type="text-primary" class="[ button ]" href=#>Live Demo</a>
-                        <a data-type="text-secondary" class="[ button ]" href="#">View Code</a>
+                        <a target="_blank" data-type="text-primary" class="[ button ]" href="https://old.terribledevs.com">Live Demo</a>
+                        <a target="_blank" data-type="text-secondary" class="[ button ]" href="https://github.com/theterriblestudent/website">View Code</a>
                     </div>
                 </div>
                 <div class="[ project__card ] [ flex-column gap-20 ]">
@@ -147,8 +147,8 @@
                     <p class="[ card__title ][ font-primary f-weight-medium clr-text-primary fs-med ]">My New Portfolio</p>
                     <p class="[ font-primary f-weight-normal clr-text-dark lh-card fs-sm ]">The very website you are browsing now, I built using HTML, SASS and JavaScript.</p>
                     <div class="[ flex-row jc-left ai-center gap-20 ]">
-                        <a data-type="text-primary" class="[ button ]" href=#>Live Demo</a>
-                        <a data-type="text-secondary" class="[ button ]" href="#">View Code</a>
+                        <a data-type="text-primary" class="[ button ]" href="#about-section">Live Demo</a>
+                        <a target="_blank" data-type="text-secondary" class="[ button ]" href="https://github.com/theterriblestudent/new_website">View Code</a>
                     </div>
                 </div>
                 <div class="[ project__card ] [ flex-column gap-20 ]">
@@ -156,7 +156,7 @@
                     <p class="[ card__title ][ font-primary f-weight-medium clr-text-primary fs-med ]">Saas Website</p>
                     <p class="[ font-primary f-weight-normal clr-text-dark lh-card fs-sm ]">A personal practice project that I created to demonstrate my design and coding skillset. It was created with modern HTML, CSS, and JavaScript.</p>
                     <div class="[ flex-row jc-left ai-center gap-20 ]">
-                        <a data-type="text-primary" class="[ button ]" href=#>Live Demo</a>
+                        <a data-type="text-primary" class="[ button ]" href="#">Live Demo</a>
                         <a data-type="text-secondary" class="[ button ]" href="#">View Code</a>
                     </div>
                 </div> 
@@ -165,8 +165,8 @@
                     <p class="[ card__title ][ font-primary f-weight-medium clr-text-primary fs-med ]">Movie DB App</p>
                     <p class="[ font-primary f-weight-normal clr-text-dark lh-card fs-sm ]">A movie and TV show app that I created to demonstrate my advanced ReactJS skills and knowledge to query APIs.</p>
                     <div class="[ flex-row jc-left ai-center gap-20 ]">
-                        <a data-type="text-primary" class="[ button ]" href=#>Live Demo</a>
-                        <a data-type="text-secondary" class="[ button ]" href="#">View Code</a>
+                        <a target="_blank" data-type="text-primary" class="[ button ]" href="https://theterriblefilmdb.netlify.app/">Live Demo</a>
+                        <a target="_blank" data-type="text-secondary" class="[ button ]" href="https://github.com/theterriblestudent/theterriblefilmdb">View Code</a>
                     </div>
                 </div>   
             </div>
@@ -196,16 +196,16 @@
                     <div class="[ message-field ]">
                         <label class="[ fs-xsm font-primary clr-text-light f-weight-medium ]" for="message-field">Message</label>
                         <div class="[ input-border ]">
-                            <textarea class="[ clr-text-light font-primary ]" type="" id="name-field" placeholder="Hello! How can I be of service?"></textarea>
+                            <textarea class="[ clr-text-light font-primary ]" type="" id="message-field" placeholder="Hello! How can I be of service?"></textarea>
                         </div>
                     </div>
                     <div class="[ buttons ][ flex-row jc-left gap-20 ai-center ]">
-                        <button data-type="icon" class="[ button ]">Send
+                        <button type="submit" data-type="icon" class="[ button ]">Send
                             <span class="material-icons">
                                 send
                             </span>
                         </button>
-                        <button data-type="text-secondary" class="[ button ]">Clear Fields</button>
+                        <button type="reset" data-type="text-secondary" class="[ button ]">Clear Fields</button>
                     </div>
                 </form>
                 <div class="[ socials ] [ flex-row gap-40 jc-center ai-center ] [ clr-text-light fs-lg ]">
@@ -214,10 +214,11 @@
                     <a target="_blank" href="https://www.twitter.com/theterribledev"><i class="fab fa-twitter" ></i></a>
                     <a target="_blank" href="https://www.instagram.com/theterribledev"><i class="fab fa-instagram" ></i></a>
                 </div>
-                <p class="[ email-address ] [ f-weight-medium fs-lg font-primary clr-text-dark ]">me@terribledevs.com</p>
+                <p class="[ email-address ] [ f-weight-medium fs-lg font-primary clr-text-dark pointer ]">me@terribledevs.com</p>
             </div>
         </div>
     </section>
-    <script src="./index.js"></script>
+    <script src="./index.js" type="module"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
 </body>
 </html>
