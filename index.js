@@ -3,13 +3,14 @@ const menuButton = document.querySelector('#menu-button');
 const mobileNav = document.querySelector('.nav__mobile');
 const serviceTitle = document.querySelector('#expertise-title');
 const serviceDescription = document.querySelector('#expertise-description');
-const services = Array.from(document.querySelector('.expertise__icons').children);
-const SERVICE_ID = 'service_m3hiz3g';
-const TEMPLATE_ID = 'template_ttct74n';
-
+const serviceIcons = Array.from(document.querySelector('.expertise__icons').children);
 
 //Variables
 let shownIndex = 0;
+let timer;
+
+const SERVICE_ID = 'service_m3hiz3g';
+const TEMPLATE_ID = 'template_ttct74n';
 
 const SERVICES = [{
     title: "Resposinve Web Design",
@@ -25,22 +26,24 @@ const SERVICES = [{
     description: "Got an issue with your website? Well, you can trust we'll take care of it for you. Everything from bug fixes to complete re-designs.",
 }]
 
-let timer;
-
 //Opening and closing the mobile nav
 menuButton.addEventListener('click', function() {
     mobileNav.classList.toggle('shown');
 });
 
-/*Showing different services in an interval of 5 seconds */
+/*Showing different services in an interval of 7 seconds */
 serviceTitle.textContent = SERVICES[shownIndex].title;
 serviceDescription.textContent = SERVICES[shownIndex].description;
+fillIcon("#7C6528", shownIndex);
 
 function scrollServices() {
     timer = window.setInterval(function () {
-        shownIndex === 3 ? shownIndex = 0 : shownIndex++;
+        if (shownIndex === 3) {
+            fillIcon("#686767", shownIndex);
+            shownIndex = 0;
+        }else shownIndex++; 
         switchServices();
-    }, 5000);
+    }, 7000);
 }
 
 scrollServices();
@@ -57,12 +60,18 @@ function switchServices() {
 //Displaying the right service information when hovering on icons
 document.querySelectorAll('.svg-icon__non-mobile').forEach(icon => {
     icon.addEventListener('mouseover', function(event) {
-        shownIndex = services.indexOf(event.target);
+        shownIndex = serviceIcons.indexOf(event.target);
+        serviceIcons.forEach((icon, index) => {
+            fillIcon("#686767", index);
+        })
         clearInterval(timer);
         switchServices();
         window.setTimeout(function() {
             timer = window.setInterval(function () {
-                shownIndex === 3 ? shownIndex = 0 : shownIndex++;
+                if (shownIndex === 3) {
+                    fillIcon("#686767", shownIndex);
+                    shownIndex = 0;
+                }else shownIndex++;
                 switchServices();
             }, 5000);
         }, 1020);
@@ -73,11 +82,20 @@ document.querySelectorAll('.svg-icon__non-mobile').forEach(icon => {
 function fadeOut() {
     serviceTitle.style.opacity = 0;
     serviceDescription.style.opacity = 0;
+
+    if (shownIndex === 0) return;   
+    fillIcon("#686767", shownIndex - 1);
 }
 
 function fadeIn() {
     serviceTitle.style.opacity = 1;
     serviceDescription.style.opacity = 1;
+    fillIcon("#7C6528", shownIndex);
+}
+
+function fillIcon(color, index) {
+    serviceIcons[index].getSVGDocument().querySelectorAll('.internal_svg_class')
+        .forEach(path => path.style.fill = color);
 }
 
 /* Form Functionality */
@@ -100,7 +118,7 @@ document.querySelector('form').addEventListener('submit', (event) => {
     emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams).then(response => {
          console.log('email-sent');
     }, error => {
-         console.log('email-not-sent');
+         console.log('email-not-sent: ' + error);
     });
 
     document.querySelector('#message-field').value = '';
