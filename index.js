@@ -34,7 +34,7 @@ menuButton.addEventListener('click', function() {
 /*Showing different services in an interval of 7 seconds */
 serviceTitle.textContent = SERVICES[shownIndex].title;
 serviceDescription.textContent = SERVICES[shownIndex].description;
-fillIcon("#7C6528", shownIndex);
+fillIcon("#7C6528", 0);
 
 function scrollServices() {
     timer = window.setInterval(function () {
