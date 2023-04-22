@@ -16,6 +16,9 @@
         .contact__details {
             @include mixins.mobile {
                 justify-content: center;
+                form {
+                    width: 80vw;
+                }
             }
             .fab {
                 color: variables.$on-text-color;

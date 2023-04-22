@@ -1,19 +1,18 @@
 @use '../abstracts/variables';
-
-form {
-    width: 0.333fr;
-}
+@use '../abstracts/mixins';
 
 .text-field {
     width: 100%;
     .input-border {
-        border: 2px solid variables.$bg-color-300;
-        padding: 15px;
+        border-radius: 8px;
+        background-color: variables.$bg-color-300;
+        padding: 8px;
         margin-top: 15px;
         width: 100%;
         min-width: 380px;
+        @include mixins.mobile {min-width: 0;}
         input {
-            background-color: variables.$bg-color-300;
+            background-color: variables.$bg-color-400;
             border: none;
             outline: none;
             height: 40px;
@@ -26,11 +25,11 @@ form {
 .message-field {
     @extend .text-field;
     textarea {
-        background-color: variables.$bg-color-300;
+        background-color: variables.$bg-color-400;
         border: none;
         outline: none;
         width: 100%;
-        padding: 10px;
+        padding: 8px;
         height: 250px;
     }
 }

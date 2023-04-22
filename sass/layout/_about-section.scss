@@ -15,6 +15,9 @@
             flex-direction: column;
         }
         .introduction {
+            .title-header.non-mobile{
+                margin-bottom: -10px;
+            }
             @include mixins.tablet {
                 align-items: center;
             }
