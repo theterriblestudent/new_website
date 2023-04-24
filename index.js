@@ -29,6 +29,15 @@ const SERVICES = [{
 //Opening and closing the mobile nav
 menuButton.addEventListener('click', function() {
     mobileNav.classList.toggle('shown');
+
+});
+
+document.addEventListener('click', function(event) {
+    const {target} = event;
+    if(target.id === 'menu-button'|| target.tagName.toLowerCase() === 'li'|| target.tagName.toLowerCase() === 'ul' )
+        return;
+    if (mobileNav.classList.contains('shown'))
+        mobileNav.classList.remove('shown');
 });
 
 /*Showing different services in an interval of 7 seconds */

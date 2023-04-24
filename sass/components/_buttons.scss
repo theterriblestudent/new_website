@@ -20,7 +20,8 @@
 %text-button {
     font-weight: variables.$fw-600;
     text-transform: uppercase;
-    font-size: variables.$fs-sm;
+    font-size: 1rem;
+    font-size: clamp(1rem, 0.9107142857142857rem + 0.2857142857142857vw, 1.125rem);
     background: transparent;
     border:none;
     padding: 0;

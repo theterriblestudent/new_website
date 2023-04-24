@@ -1,4 +1,5 @@
 @use '../abstracts/variables';
+@use '../abstracts/mixins';
 
 .project__card {
     .card__title {margin-bottom: -8px;}
@@ -10,6 +11,7 @@
         object-position: top;
     }
     flex-basis: 370px;
+    @include mixins.mobile {flex-basis: 335px;}
     position: relative;
     border-radius: 8px;
     border: 2px solid darken(variables.$on-text-color-dark, 52);
