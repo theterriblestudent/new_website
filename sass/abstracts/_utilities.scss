@@ -1,4 +1,5 @@
 @use './variables';
+@use './mixins';
 
 /* Typography **/
 .font-primary {font-family: variables.$fs-primary;}
@@ -34,6 +35,12 @@
 .clr-text-primary {color: variables.$primary-color-400;}
 
 .text-uppercase {text-transform: uppercase;}
+
+.justify-text-mobile {
+  @include mixins.mobile {
+    text-align: justify;
+  }
+}
 
 .bg-dark-400 {background-color: variables.$bg-color-400;}
 .bg-dark-300 {background-color: variables.$bg-color-300;}
