@@ -135,5 +135,5 @@ document.querySelector('form').addEventListener('submit', (event) => {
 });
 
 document.querySelector('.email-address').addEventListener('click', function(event) {
-    window.location.href = `mailto:me@terribledevs.com`;
+    window.location.href = `mailto:madondo.sal@gmail.com`;
 });
